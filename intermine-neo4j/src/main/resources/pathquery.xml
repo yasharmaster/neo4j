@@ -1,0 +1,3 @@
+<query model="genomic" view="Gene.primaryIdentifier Gene.chromosome.primaryIdentifier Gene.chromosome.symbol" constraintLogic="(A)">
+    <constraint path="Gene.chromosome.primaryIdentifier" value="2L" op="=" code="A"/>
+</query>
