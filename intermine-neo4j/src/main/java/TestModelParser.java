@@ -27,6 +27,24 @@ public class TestModelParser {
         System.out.println(QueryGenerator.pathQueryToCypher(pathQuery).toString());
 
         System.out.println(parser.getRelationshipType("Gene", "Chromosome"));
+        /*
+            Output - Chromosome
+         */
+
+        System.out.println(parser.getRelationshipType("SequenceFeature", "Chromosome"));
+        /*
+            Output - Chromosome
+         */
+
+        System.out.println(parser.getRelationshipType("Chromosome", "Gene"));
+        /*
+            Output - Gene
+         */
+
+        System.out.println(parser.getRelationshipType("Chromosome", "SequenceFeature"));
+        /*
+            Output - SequenceFeature
+         */
     }
 
     private static PathQuery getPathQuery(String name, QueryService queryService) throws IOException {
